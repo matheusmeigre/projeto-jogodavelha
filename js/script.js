@@ -1,4 +1,37 @@
 // Initial Data
+let music = document.getElementById("background-music");
+let toggleButton = document.getElementById("toggle-sound");
+
+document.getElementById("gameArea").style.display = "none"
+document.getElementById("toggle-sound").style.display = "none"
+
+document.getElementById("login-form").addEventListener("submit", function(event) {
+    event.preventDefault();
+    var username = document.getElementById("username").value;
+
+    // Aqui você pode adicionar a lógica de identificação, por exemplo, verificar se o nome de usuário existe em um banco de dados
+    // Se o nome de usuário existir, exiba o jogo, caso contrário, exiba uma mensagem de erro
+    if (username.trim() !== "") {
+        document.getElementById("login-container").style.display = "none";
+        document.getElementById("gameArea").style.display = "grid";
+        document.getElementById("toggle-sound").style.display = "block"
+    } else {
+        document.getElementById("login-message").innerText = "Por favor, insira um nome de usuário.";
+    }
+
+    music.play()
+});
+
+toggleButton.addEventListener("click", function() {
+    if (music.paused) {
+        music.play();
+        toggleButton.textContent = "Mute";
+    } else {
+        music.pause();
+        toggleButton.textContent = "Unmute";
+    }
+});
+
 let frame =  {
     a1:'', a2: '', a3: '',
     b1: '', b2: '', b3: '',

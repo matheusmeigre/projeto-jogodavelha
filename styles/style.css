@@ -4,13 +4,37 @@
     box-sizing: border-box;
 }
 
+#login-container {
+    text-align: center;
+    margin-top: 100px;
+    background-color: red;
+    border-radius: 4%;
+    padding: 10px;
+    
+}
+
+#login-form {
+    display: inline-block;
+}
+
+#login-message {
+    margin-top: 10px;
+    color: red;
+}
+
+p {
+    padding-top: 5px;
+}
+
 body {
     display: flex;
     min-height: 100vh;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: #333;
+    background-image: url(../assets/images/angelsvsdevils.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -24,6 +48,7 @@ h1 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     margin-top: 30px;
+    background-color:#45454549;
 }
 .area .item {
     width: 100px;
@@ -59,6 +84,7 @@ h1 {
     margin-top: 30px;
     border: 1px dotted #FFF;
     padding: 10px;
+    background-color:#4545459f;
 }
 .infoitem {
     flex: 1;
@@ -80,4 +106,9 @@ h1 {
     color: #FFF;
     padding: 10px;
     margin-top: 20px;
+}
+
+.reset:hover {
+    background-color: #81818187;
+    font-size: 18px;
 }
